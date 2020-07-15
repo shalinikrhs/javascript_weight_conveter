@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Pounds Converter</title>
+<body>
+
+  <div class=weight_converter>
+      <h1 style="color:darkgreen;">Pounds converter..</h1>
+<p>
+  <label>Pounds</label>
+  <input id="inputPounds" type="number" placeholder="Pounds" 
+  oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+</p>
+<p>Kilograms: <span id="outputKilograms"></span></p>
+<p>Ounce: <span id="outputOunces"></span></p>
+<p>Grams: <span id="outputGrams"></span></p>
+<p>Stones: <span id="outputStones"></span></p>
+<a href="weight_converter.html">..Home:)..</a>
+</div>
+<!-- java script-->
+<script>
+function weightConverter(valNum) {
+  document.getElementById("outputKilograms").innerHTML=valNum/2.2046;
+  document.getElementById("outputOunces").innerHTML=valNum*16;
+  document.getElementById("outputGrams").innerHTML=valNum/0.0022046;
+  document.getElementById("outputStones").innerHTML=valNum*0.071429;
+}
+</script>
+<!-- css -->
+<style>
+  .weight_converter{
+      color:cornsilk;
+      text-align: center;
+      margin: 200px;
+      width: 400px;
+      padding: 2px;
+      border: 2px solid darkgreen;
+      background-color: black;
+      transform: translate(50%,0%);
+      border-top-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+  
+  }
+ 
+
+</body>
+</html>
